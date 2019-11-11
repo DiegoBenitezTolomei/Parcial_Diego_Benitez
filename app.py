@@ -69,13 +69,13 @@ def ingresar():
                 return redirect(url_for('ingresar'))
     return render_template('login.html', formulario=formulario)
 
-#cree una ruta de "listacli" con una funcion "listacli"
+#cree una ruta de "listacli" con una funcion "liscli" que renderisa el html listaclientes
 @app.route('/ListaCli')
 def liscli():
     cli = CsvEnLista()
     return render_template('listaclientes.html', clie = cli)
 
-#creo una ruta "about", con una funcion "about", que renderiza el template en "sobre.html"
+#creo una ruta "about", con una funcion "Sobre", que renderiza el template en "sobre.html"
 @app.route('/about')
 def Sobre():
     return render_template('sobre.html')
