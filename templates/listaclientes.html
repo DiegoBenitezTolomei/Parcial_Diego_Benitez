@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% block title %}{% endblock %}
+    <h1>Clientes de Conesa</h1>
+<div> 
+    <div class="container-fluid">
+        <table class="table table-bordered table-condensed" >
+            <tbody>
+                {% for linea in  clie %}
+                    <tr class="active">                
+                        {% for item in  linea %}
+                        <td >{{item}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
